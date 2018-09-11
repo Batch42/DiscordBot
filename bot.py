@@ -29,7 +29,7 @@ async def on_ready():
 @bot.command(pass_context=True)
 async def shutdown(ctx):
     name = str(ctx.message.author)
-    if name == me:
+    if name == data['me']:
         writer = open(file,'w')
         writer.write(json.dumps(data))
         writer.close()
