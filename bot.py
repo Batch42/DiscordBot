@@ -12,7 +12,6 @@ file = 'data.json'
 temp=open(file)
 data=json.loads(temp.read())
 temp.close()
-me = 'Batch#9910'
 #End
 
 
