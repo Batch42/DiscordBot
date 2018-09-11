@@ -50,6 +50,13 @@ async def join(ctx):
         await broadcast(ctx.message.channel)
 
 @bot.command(pass_context=True)
+async def leave(ctx):
+    name = str(ctx.message.author)
+    if name in data['players']:
+        data['players'].remove(name)
+    await broadcast(ctx.message.channel)
+
+@bot.command(pass_context=True)
 async def when(ctx):
     await broadcast(ctx.message.channel)
 
